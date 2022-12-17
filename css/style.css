@@ -113,7 +113,7 @@ body {
 
     /* right-sidebar */
     .map {
-        background-image: url(/assests/images/map.png);
+        background-image: url(/assets/images/map.png);
         background-repeat: no-repeat;
         background-size: cover;
         width: 400px;

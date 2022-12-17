@@ -8,9 +8,9 @@
 
 /* Root variables */
 :root {
-    --color-primary: #3e3e65;
+    --color-primary: #242455;
     --color-secondary: #626082;
-    --color-body: #181e49;
+    --color-body: #131a47;
     --color-button: #612ace;
     --color-white: #fff;
 }
@@ -21,10 +21,20 @@ html {
 
 body {
     font-family: sans-serif;
+    color: var(--color-white);
     display: flex;
     justify-content: space-between;
     background-color: var(--color-body);
     font-size: 1.4rem;
+    background-image: url(/assets/images/map.png);
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-position: right;
+}
+
+.secondary {
+    color: var(--color-secondary);
+    font-weight: 400;
 }
 
 /* navbar */
@@ -83,7 +93,7 @@ body {
     }
     
     .nav.nav__expanded {
-        background: radial-gradient(farthest-side at 100% 35% , #4a1d64 0%, rgb(50 23 104) 50%, rgba(24,30,73,1) 100%);
+        background: radial-gradient(farthest-side at 100% 35% , #4a1d64 0%, rgb(50 23 104) 40%, #131a47 100%);
     }
 
     .nav__item {
@@ -110,14 +120,47 @@ body {
     padding: 2rem;
 }
 
+.main__nav {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.main__nav p {
+    display: flex;
+    align-items: center;
+}
+
+.main__nav p img {
+    margin-left: 1rem;
+    width: 40px;
+}
+
+.main h1 {
+    margin: 2rem 0;
+}
+
+.content {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    display: flex;
+    background-color: var(--color-primary);
+    border-radius: 35px;
+}
+
+.content * {
+    margin-bottom: 2rem;
+}
+
 
     /* right-sidebar */
     .map {
-        background-image: url(/assets/images/map.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 400px;
-        height: 400px;
+      color: #fff;
+      margin: 2rem;
+    }
+
+    .map h3 {
+        text-align: right;
     }
 
     /* button */

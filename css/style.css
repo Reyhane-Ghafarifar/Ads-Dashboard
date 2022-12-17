@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: var(--color-body);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     background-image: url(/assets/images/map.png);
     background-repeat: no-repeat;
     background-size: inherit;
@@ -148,8 +148,22 @@ body {
     border-radius: 35px;
 }
 
-.content * {
-    margin-bottom: 2rem;
+.content__text * {
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    white-space: nowrap;
+}
+
+.content__text {
+    margin-right: 6rem;
+}
+
+.content__text span b {
+    font-size: 2rem;
+}
+
+.content__text div:nth-child(2) .secondary {
+    font-weight: 700;
 }
 
 
@@ -157,10 +171,19 @@ body {
     .map {
       color: #fff;
       margin: 2rem;
+      height: 290px;
     }
 
     .map h3 {
         text-align: right;
+    }
+
+    .map p span {
+        white-space: nowrap;
+    }
+
+    .activity div {
+        background-color: var(--color-primary);
     }
 
     /* button */
@@ -171,9 +194,18 @@ body {
         cursor: pointer;
         border-radius: 15px;
         border: none;
-        
     }
 
     .btn--primary {
         background-color: var(--color-button);
+    }
+
+    .btn--secondary {
+        background: rgba(97,42,206,1);
+        background: linear-gradient(135deg, rgba(58,129,190,1) 0%, rgba(97,42,206,1) 40%, rgba(118,54,203,1) 70%, rgba(167,81,195,1) 100%);
+        transition: background 1s;
+    }
+
+    .btn--secondary:hover {
+        background: linear-gradient(45deg, rgba(58,129,190,1) 0%, rgba(97,42,206,1) 40%, rgba(118,54,203,1) 80%, rgba(167,81,195,1) 100%);
     }

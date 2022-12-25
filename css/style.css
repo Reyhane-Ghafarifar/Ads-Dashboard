@@ -28,6 +28,7 @@ body {
     font-size: 1.6rem;
     background-image: url(/assets/images/map.png);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: inherit;
     background-position: right;
 }
@@ -43,7 +44,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 3.8rem 2rem 8rem;
+    padding: 3.8rem 1.2rem 8rem;
     align-items: center;
 }
 
@@ -116,7 +117,6 @@ body {
 
 /* main */
 .main {
-    width: 60%;
     padding: 2rem;
 }
 
@@ -141,10 +141,11 @@ body {
 }
 
 .content {
+    width: 95%;
     margin-bottom: 2rem;
     padding: 2rem;
     display: flex;
-    background-color: var(--color-primary);
+    background: radial-gradient(circle at 80% 70% , #4a1d64 0%, rgb(50 23 104) 40%, #242455 100%);
     border-radius: 35px;
 }
 
@@ -182,8 +183,29 @@ body {
         white-space: nowrap;
     }
 
-    .activity div {
+    .activity .notification {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 15px;
         background-color: var(--color-primary);
+        margin-top: 1rem;
+        margin-right: 1rem;
+        padding: 1.5rem 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    .activity--profile img {
+        width: 40px;
+    }
+
+
+    .activity--profile :last-child {
+        background-color: var(--color-primary);
+        position: relative;
+        left: -33%;
+border-radius: 30px;
+padding: 0.2rem;
     }
 
     /* button */
@@ -203,9 +225,19 @@ body {
     .btn--secondary {
         background: rgba(97,42,206,1);
         background: linear-gradient(135deg, rgba(58,129,190,1) 0%, rgba(97,42,206,1) 40%, rgba(118,54,203,1) 70%, rgba(167,81,195,1) 100%);
-        transition: background 1s;
+        transition: background 4s;
     }
 
     .btn--secondary:hover {
         background: linear-gradient(45deg, rgba(58,129,190,1) 0%, rgba(97,42,206,1) 40%, rgba(118,54,203,1) 80%, rgba(167,81,195,1) 100%);
+    }
+
+    .activity--icon button {
+        background-color: var(--color-secondary);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
+        border: none;
+        color: white;
     }
